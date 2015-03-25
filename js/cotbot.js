@@ -23,6 +23,22 @@ $(document).ready(function() {
   
   });
 
+  $(".hammer").click(function() {
+    $(".left-leg").toggleClass('hammer');
+    setTimeout(
+      function()
+      {
+        $(".right-leg").toggleClass('hammer-r');
+      }, 100);
+    $(".robot").toggleClass('robot-hammer');
+    
+  });
+
+  // this seems to toggle presence/absence
+  // $(".hammer").click(function() {
+  //   $(".left-leg").toggle();
+  // });
+
   $(".moves").click(function() {
     $("img").toggle();
   });

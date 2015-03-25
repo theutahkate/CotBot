@@ -96,6 +96,52 @@
   top: 550px;
   }
 
+/*normally 80px*/
+@keyframes hammer-l {
+  from {
+    top: 80px;
+  }
+}
+@-webkit-keyframes hammer-l {
+  from {
+    top: 80px;
+  }
+}
+@-moz-keyframes hammer-l {
+  from {
+    top: 80px;
+  }
+}
+
+@keyframes hammer-r {
+  from {
+    top: 80px;
+  }
+}
+@-webkit-keyframes hammer-r {
+  from {
+    top: 80px;
+  }
+}
+@-moz-keyframes hammer-r {
+  from {
+    top: 80px;
+  }
+}
+
+.hammer {
+  /*insert hammer animation here*/
+  animation: hammer-l .2s infinite;
+  -webkit-animation: hammer-l .2s infinite;
+  -moz-animation: hammer-l .2s infinite;
+}
+.hammer-r {
+   animation: hammer-r .2s infinite;
+  -webkit-animation: hammer-r .2s infinite;
+  -moz-animation: hammer-r .2s infinite;
+ 
+}
+
 .left-leg {
   font-family: 'Poller One', verdana, arial, sans-serif;
   font-weight: bold;
@@ -121,6 +167,29 @@
   top: 57px;
   left: 85px;
   z-index: -1;
+}
+
+/*robot part of hammer dance*/
+@keyframes hammer-full {
+  from {
+    left: 800px;
+  }
+}
+@-webkit-keyframes hammer-full {
+  from {
+    left: 800px;
+  }
+}
+@-moz-keyframes hammer-full {
+  from {
+    left: 800px;
+  }
+}
+
+.robot-hammer {
+  animation: hammer-full 4s infinite;
+  -webkit-animation: hammer-full 4s infinite;
+  -moz-animation: hammer-full 4s infinite;
 }
 
 
