@@ -55,6 +55,8 @@
   border-left: 75px solid transparent;
   border-right: 75px solid transparent;
   border-radius: 20px 20px 100px 100px;
+  position: absolute;
+
 }
 .left {
   font-family: 'Poller One', verdana, arial, sans-serif;
@@ -64,10 +66,10 @@
   transform: rotate(200deg);
   -webkit-transform: rotate(200deg);
   -moz-transform: rotate(200deg);
-  position: relative;
-  top: -320px;
-  left: -190px;
-  z-index: -1;
+  position: absolute;
+  top: -315px;
+  left: -150px;
+  z-index: -2;
 }
 .right {
   font-family: 'Poller One', verdana, arial, sans-serif;
@@ -78,21 +80,49 @@
   -webkit-transform: scaleY(-1) rotate(20deg);
   -moz-transform: scaleY(-1) rotate(20deg);
   position: relative;
-  top: -620px;
-  left: 190px;
-  z-index: -1;
+  top: -325px;
+  left: 185px;
+  z-index: -2;
 }
+
 .foot {
-  height: 40px;
-  width: 40px;
+  height: 60px;
+  width: 100px;
   background: #ccc;
-  border-radius: 40px;
+  border-radius: 60px;
   border: 15px solid #999;
-  position: relative;
-  left: 110px;
-  top: -10px;
+  position: absolute;
+  left: 80px;
+  top: 550px;
+  }
+
+.left-leg {
+  font-family: 'Poller One', verdana, arial, sans-serif;
+  font-weight: bold;
+  font-size: 250px;
+  color: #666;
+  transform: scaleY(1.5) rotate(190deg);
+  -webkit-transform: scaleY(1.5) rotate(190deg);
+  -moz-transform: scaleY(1.5) rotate(190deg);
+  position: absolute;
+  top: 65px;
+  left: -80px;
+  z-index: -2;
+}
+.right-leg {
+  font-family: 'Poller One', verdana, arial, sans-serif;
+  font-weight: bold;
+  font-size: 250px;
+  color: #666;
+  transform: scaleY(-1.5) rotate(15deg);
+  -webkit-transform: scaleY(-1.5) rotate(15deg);
+  -moz-transform: scaleY(-1.5) rotate(15deg);
+  position: absolute;
+  top: 57px;
+  left: 85px;
   z-index: -1;
 }
+
 
 @keyframes dance {
   from {
