@@ -85,7 +85,7 @@
   z-index: -2;
 }
 
-.foot {
+.pelvis {
   height: 60px;
   width: 100px;
   background: #ccc;
@@ -172,24 +172,33 @@
 /*robot part of hammer dance*/
 @keyframes hammer-full {
   from {
-    left: 800px;
+    left: 500px;
+  }
+  to {
+    left: 0px;
   }
 }
 @-webkit-keyframes hammer-full {
   from {
-    left: 800px;
+    left: 500px;
+  }
+  to {
+    left: 0px;
   }
 }
 @-moz-keyframes hammer-full {
   from {
-    left: 800px;
+    left: 500px;
+  }
+  to {
+    left: 0px;
   }
 }
 
 .robot-hammer {
-  animation: hammer-full 4s infinite;
-  -webkit-animation: hammer-full 4s infinite;
-  -moz-animation: hammer-full 4s infinite;
+  animation: hammer-full 3s infinite alternate;
+  -webkit-animation: hammer-full 3s infinite alternate;
+  -moz-animation: hammer-full 3s infinite alternate;
 }
 
 
