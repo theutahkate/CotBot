@@ -131,14 +131,14 @@
 
 .hammer {
   /*insert hammer animation here*/
-  animation: hammer-l .2s infinite;
-  -webkit-animation: hammer-l .2s infinite;
-  -moz-animation: hammer-l .2s infinite;
+  animation: hammer-l .2s linear infinite;
+  -webkit-animation: hammer-l .2s linear infinite;
+  -moz-animation: hammer-l .2s linear infinite;
 }
 .hammer-r {
-   animation: hammer-r .2s infinite;
-  -webkit-animation: hammer-r .2s infinite;
-  -moz-animation: hammer-r .2s infinite;
+   animation: hammer-r .2s 75ms linear infinite;
+  -webkit-animation: hammer-r .2s 75ms linear infinite;
+  -moz-animation: hammer-r .2s 75ms linear infinite;
  
 }
 
@@ -175,7 +175,7 @@
     left: 500px;
   }
   to {
-    left: 0px;
+    left: 100px;
   }
 }
 @-webkit-keyframes hammer-full {
@@ -183,7 +183,7 @@
     left: 500px;
   }
   to {
-    left: 0px;
+    left: 100px;
   }
 }
 @-moz-keyframes hammer-full {
@@ -191,14 +191,14 @@
     left: 500px;
   }
   to {
-    left: 0px;
+    left: 100px;
   }
 }
 
 .robot-hammer {
-  animation: hammer-full 3s infinite alternate;
-  -webkit-animation: hammer-full 3s infinite alternate;
-  -moz-animation: hammer-full 3s infinite alternate;
+  animation: hammer-full 2s linear infinite alternate;
+  -webkit-animation: hammer-full 2s linear infinite alternate;
+  -moz-animation: hammer-full 2s linear infinite alternate;
 }
 
 

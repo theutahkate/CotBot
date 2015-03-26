@@ -25,11 +25,11 @@ $(document).ready(function() {
 
   $(".hammer").click(function() {
     $(".left-leg").toggleClass('hammer');
-    setTimeout(
-      function()
-      {
-        $(".right-leg").toggleClass('hammer-r');
-      }, 100);
+    // setTimeout(
+    //   function()
+    //   {
+    $(".right-leg").toggleClass('hammer-r');
+      // }, 100);
     $(".robot").toggleClass('robot-hammer');
     
   });
