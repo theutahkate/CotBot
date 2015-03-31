@@ -37,6 +37,16 @@ $(document).ready(function() {
     } else {
       audio.play();
     }
+    window.setInterval(function(){
+      var red = Math.floor(Math.random() * 255);
+      var green = Math.floor(Math.random() * 255);
+      var blue = Math.floor(Math.random() * 255);
+      
+      // Generate RGBA value for css
+      var randomRGBA = 'rgba('+red+','+green+','+blue+',1)';
+      
+      $("body").css("background", randomRGBA);
+    }, 500);
   });
 
 
