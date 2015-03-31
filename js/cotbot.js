@@ -23,23 +23,26 @@ $(document).ready(function() {
   
   });
 
+    // Define audio variable for use in Hammer Time animation
+    var audio = document.createElement('audio');
+      audio.setAttribute('src', 'assets/MCHammer.mp3');
+  
+  // When hammer time button clicked, robot dances like MC Hammer, plays or pauses 'U Can't touch this'   
   $(".hammer").click(function() {
     $(".left-leg").toggleClass('hammer');
-    // setTimeout(
-    //   function()
-    //   {
     $(".right-leg").toggleClass('hammer-r');
-      // }, 100);
     $(".robot").toggleClass('robot-hammer');
-    
+    if (audio.paused == false) {
+      audio.pause();
+    } else {
+      audio.play();
+    }
   });
+
 
   // this seems to toggle presence/absence
   // $(".hammer").click(function() {
   //   $(".left-leg").toggle();
   // });
 
-  $(".moves").click(function() {
-    $("img").toggle();
-  });
 });

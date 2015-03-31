@@ -171,58 +171,35 @@
 
 /*robot part of hammer dance*/
 @keyframes hammer-full {
-  from {
-    left: 500px;
+  to  {
+    left: 400px;
   }
-  to {
+  /*from {
     left: 100px;
-  }
+  }*/
 }
 @-webkit-keyframes hammer-full {
-  from {
-    left: 500px;
-  }
   to {
-    left: 100px;
+    left: 400px;
   }
+  /*from {
+    left: 100px;
+  }*/
 }
 @-moz-keyframes hammer-full {
-  from {
-    left: 500px;
-  }
   to {
-    left: 100px;
+    left: 400px;
   }
+  /*from {
+    left: 100px;
+  }*/
 }
 
 .robot-hammer {
-  animation: hammer-full 2s linear infinite alternate;
-  -webkit-animation: hammer-full 2s linear infinite alternate;
-  -moz-animation: hammer-full 2s linear infinite alternate;
+  animation: hammer-full 1s linear infinite alternate;
+  -webkit-animation: hammer-full 1s linear infinite alternate;
+  -moz-animation: hammer-full 1s linear infinite alternate;
 }
 
 
-@keyframes dance {
-  from {
-    left: 800px;
-  }
-}
-@-webkit-keyframes dance {
-  from {
-    left: 800px;
-  }
-}
-@-moz-keyframes dance {
-  from {
-    left: 800px;
-  }
-}
 
-img {
-  animation: dance 4s infinite;
-  -webkit-animation: dance 4s infinite;
-  -moz-animation: dance 4s infinite;
-  position: absolute;
-  top: 200px;
-  left: 400px;
-} 
