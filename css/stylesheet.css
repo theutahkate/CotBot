@@ -96,7 +96,7 @@
   top: 550px;
   }
 
-
+/*Left leg up/down in hammer dance keyframes*/
 @keyframes hammer-l {
   from {
     top: 80px;
@@ -113,6 +113,7 @@
   }
 }
 
+/* Right leg up/down in hammer dance keyframes*/
 @keyframes hammer-r {
   from {
     top: 80px;
@@ -129,11 +130,14 @@
   }
 }
 
-.hammer {
+/* Left leg up/down in hammer dance animation*/
+.hammer-l {
   animation: hammer-l .2s linear infinite;
   -webkit-animation: hammer-l .2s linear infinite;
   -moz-animation: hammer-l .2s linear infinite;
 }
+
+/* Right leg up/down in hammer dance animation*/
 .hammer-r {
    animation: hammer-r .2s 75ms linear infinite;
   -webkit-animation: hammer-r .2s 75ms linear infinite;
@@ -168,8 +172,8 @@
   z-index: -1;
 }
 
-/*robot part of hammer dance*/
-@keyframes hammer-full {
+/*robot lateral movement in hammer dance keyframes*/
+@keyframes hammer-lateral {
   to  {
     left: 400px;
   }
@@ -177,7 +181,7 @@
     left: 100px;
   }*/
 }
-@-webkit-keyframes hammer-full {
+@-webkit-keyframes hammer-lateral {
   to {
     left: 400px;
   }
@@ -185,7 +189,7 @@
     left: 100px;
   }*/
 }
-@-moz-keyframes hammer-full {
+@-moz-keyframes hammer-lateral {
   to {
     left: 400px;
   }
@@ -194,10 +198,11 @@
   }*/
 }
 
+/*robot lateral movement in hammer dance animation*/
 .robot-hammer {
-  animation: hammer-full 1s linear infinite alternate;
-  -webkit-animation: hammer-full 1s linear infinite alternate;
-  -moz-animation: hammer-full 1s linear infinite alternate;
+  animation: hammer-lateral 1s linear infinite alternate;
+  -webkit-animation: hammer-lateral 1s linear infinite alternate;
+  -moz-animation: hammer-lateral 1s linear infinite alternate;
 }
 
 

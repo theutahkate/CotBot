@@ -29,13 +29,13 @@ $(document).ready(function() {
   $(".hammer").click(function() {
     if (!roboWait) {
       roboWait = setTimeout( function() {
-        $(".left-leg").toggleClass('hammer');
+        $(".left-leg").toggleClass('hammer-l');
         $(".right-leg").toggleClass('hammer-r');
         $(".robot").toggleClass('robot-hammer');
          $(".brain").toggleClass('laser');
       }, 500);
     } else {
-        $(".left-leg").toggleClass('hammer');
+        $(".left-leg").toggleClass('hammer-l');
         $(".right-leg").toggleClass('hammer-r');
         $(".robot").toggleClass('robot-hammer');
          $(".brain").toggleClass('laser');
