@@ -1,7 +1,4 @@
-console.log("something");
-
 $(document).ready(function() {
-  console.log("ready");
 
   // When eyes button is clicked, toggle laser class on brain
   $(".flash").click(function() {
@@ -20,15 +17,14 @@ $(document).ready(function() {
     
     // Change background to random RGBA color
     $("body").css("background", randomRGBA);
-  
   });
 
-    // Define audio variable for use in Hammer Time animation
+    // Define audio variable for use in Hammer Time animation, declare interval and tiomeout variables for timing in Hammer Time animation
     var audio = document.createElement('audio');
       audio.setAttribute('src', 'assets/MCHammer.mp3');
-
     var intervalID;
     var roboWait;
+
   // When hammer time button clicked, robot dances like MC Hammer, plays or pauses 'U Can't touch this'   
   $(".hammer").click(function() {
     if (!roboWait) {
@@ -36,12 +32,13 @@ $(document).ready(function() {
         $(".left-leg").toggleClass('hammer');
         $(".right-leg").toggleClass('hammer-r');
         $(".robot").toggleClass('robot-hammer');
+         $(".brain").toggleClass('laser');
       }, 500);
     } else {
         $(".left-leg").toggleClass('hammer');
         $(".right-leg").toggleClass('hammer-r');
         $(".robot").toggleClass('robot-hammer');
-      
+         $(".brain").toggleClass('laser');
     }
 
     if (audio.paused == false) {
@@ -49,6 +46,7 @@ $(document).ready(function() {
     } else {
       audio.play();
     }
+
     if (!intervalID) {
       intervalID = window.setInterval(function(){
       var red = Math.floor(Math.random() * 255);
@@ -63,14 +61,7 @@ $(document).ready(function() {
     } else {
       window.clearInterval(intervalID);
       intervalID = null;
-    }
-    
+    } 
   });
-
-
-  // this seems to toggle presence/absence
-  // $(".hammer").click(function() {
-  //   $(".left-leg").toggle();
-  // });
 
 });
