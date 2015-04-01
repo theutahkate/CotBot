@@ -28,12 +28,22 @@ $(document).ready(function() {
       audio.setAttribute('src', 'assets/MCHammer.mp3');
 
     var intervalID;
-  
+    var roboWait;
   // When hammer time button clicked, robot dances like MC Hammer, plays or pauses 'U Can't touch this'   
   $(".hammer").click(function() {
-    $(".left-leg").toggleClass('hammer');
-    $(".right-leg").toggleClass('hammer-r');
-    $(".robot").toggleClass('robot-hammer');
+    if (!roboWait) {
+      roboWait = setTimeout( function() {
+        $(".left-leg").toggleClass('hammer');
+        $(".right-leg").toggleClass('hammer-r');
+        $(".robot").toggleClass('robot-hammer');
+      }, 500);
+    } else {
+        $(".left-leg").toggleClass('hammer');
+        $(".right-leg").toggleClass('hammer-r');
+        $(".robot").toggleClass('robot-hammer');
+      
+    }
+
     if (audio.paused == false) {
       audio.pause();
     } else {
