@@ -26,6 +26,8 @@ $(document).ready(function() {
     // Define audio variable for use in Hammer Time animation
     var audio = document.createElement('audio');
       audio.setAttribute('src', 'assets/MCHammer.mp3');
+
+    var intervalID;
   
   // When hammer time button clicked, robot dances like MC Hammer, plays or pauses 'U Can't touch this'   
   $(".hammer").click(function() {
@@ -37,7 +39,8 @@ $(document).ready(function() {
     } else {
       audio.play();
     }
-    window.setInterval(function(){
+    if (!intervalID) {
+      intervalID = window.setInterval(function(){
       var red = Math.floor(Math.random() * 255);
       var green = Math.floor(Math.random() * 255);
       var blue = Math.floor(Math.random() * 255);
@@ -46,7 +49,12 @@ $(document).ready(function() {
       var randomRGBA = 'rgba('+red+','+green+','+blue+',1)';
       
       $("body").css("background", randomRGBA);
-    }, 500);
+      }, 500);
+    } else {
+      window.clearInterval(intervalID);
+      intervalID = null;
+    }
+    
   });
 
 
